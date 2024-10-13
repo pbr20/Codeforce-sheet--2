@@ -1,30 +1,33 @@
-#include<stdio.h>
+#include <stdio.h>
 
+int main()
+{
 
-int main(){
+    int N;
+    int temp, r;
+    int M = 0;
 
-int N;
-int temp,r;
-int M=0;
+    scanf("%d", &N);
 
-scanf("%d",&N);
+    temp = N;
 
-temp = N;
+    while (temp != 0)
+    {
+        r = temp % 10;
+        M = (M * 10) + r;
+        temp = temp / 10;
+    }
 
-while(temp != 0){
-    r = temp % 10; 
-    M = (M * 10) + r;
-    temp = temp / 10;
-}
+    printf("%d\n", M);
 
-printf("%d\n",M);
+    if (N == M)
+    {
+        printf("YES\n");
+    }
 
-if(N == M){
-    printf("YES\n");
-}
-
-else{
-    printf("NO\n");
-}
+    else
+    {
+        printf("NO\n");
+    }
     return 0;
 }

@@ -1,31 +1,36 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
+int main()
+{
 
-int A;
-int count = 0;
+    int A;
+    int count = 0;
 
-scanf("%d",&A);
+    scanf("%d", &A);
 
-for(int i=1; i<=A; i++){
-    if(A % i == 0){
-        
-        count ++;
+    for (int i = 1; i <= A; i++)
+    {
+        if (A % i == 0)
+        {
 
-        if(count == 3){
-        break;
+            count++;
+
+            if (count == 3)
+            {
+                break;
+            }
         }
     }
 
-}
+    if (count == 2)
+    {
+        printf("YES\n");
+    }
 
-if(count == 2){
-    printf("YES\n");
-}
+    else
+    {
+        printf("NO\n");
+    }
 
-else{
-    printf("NO\n");
-   } 
-   
-     return 0;
+    return 0;
 }

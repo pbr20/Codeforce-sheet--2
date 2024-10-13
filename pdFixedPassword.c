@@ -1,19 +1,23 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
+int main()
+{
 
-int X;
+    int X;
 
-for(int i=0; ; i++){
-    scanf("%d",&X);
-    if(X == 1999){
-        printf("Correct\n");
-        break;
+    for (int i = 0;; i++)
+    {
+        scanf("%d", &X);
+        if (X == 1999)
+        {
+            printf("Correct\n");
+            break;
+        }
+        else
+        {
+            printf("Wrong\n");
+        }
     }
-    else{
-        printf("Wrong\n");
-    }
-}
 
     return 0;
 }
