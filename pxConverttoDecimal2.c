@@ -8,15 +8,13 @@ int main()
 
     scanf("%d", &n);
 
-    long long int a, bi, x, t, de;
+    long long int a, t, de = 0, count = 0;
 
     for (int i = 1; i <= n; i++)
     {
         scanf("%lld", &a);
 
         t = a;
-        bi = 0;
-        x = 1;
 
         for (int j = 0;; j++)
         {
@@ -25,8 +23,8 @@ int main()
 
             if (t == 1)
             {
-                bi = bi + (t * x);
-                x *= 10;
+                de = de + pow(2, count);
+                count++;
             }
 
             t = a;
@@ -37,25 +35,10 @@ int main()
             }
         }
 
-        de = 0;
-
-        for (int k = 0;; k++)
-        {
-
-            if (bi != 0)
-            {
-                de = de + (pow(2, k) * 1);
-            }
-
-            else if (bi == 0)
-            {
-                break;
-            }
-
-            bi /= 10;
-        }
-
         printf("%lld\n", de);
+
+        count = 0;
+        de = 0;
     }
 
     return 0;
